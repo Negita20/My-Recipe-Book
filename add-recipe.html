@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<he lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Add Recipe Page</title>
+    <style>
+        body {
+            font-family:'Times New Roman', Times, Garamond;
+            margin: 0;
+            padding: 0;
+            background-color:rgb(205, 223, 239) ;
+        }
+        header {
+            background-color: #d8c3a5 ;
+            padding: 20px;
+            text-align: center ;
+        }
+        nav {
+       background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        text-align: center;
+    }
+        nav a{
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            margin: 0 5px
+            font-weight; bold:
+        } 
+        .welcome {
+            text-align:center;
+            padding: 40px;
+        }
+        .featured-recipe, .categories {
+            max-width: 100%;
+            margin: auto;
+            padding: 20px
+        }
+
+        .featured-recipe img {
+            width: 100%;
+            max-height: 400%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .recipe-flex{
+            display: flex;
+    
+            align-items: center;
+            gap: 20px;
+        }
+
+        .recipe-flex img {
+         width: 50%;
+         max-height: 300px;
+         object-fit: cover;
+         border-radius: 10px
+        }
+
+        .recipe-text{
+            flex: 1;
+            min-width: 250px
+        }
+    
+        .featured-recipe a{
+            display: inline-block;
+            margin-top: 10px;
+            background-color:rgb(149, 198, 244);
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .categories h2{
+            margin-bottom: 10px;
+        }
+        .category-links a{
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 15px;
+            background-color:rgb(169, 189, 206);
+            border-radius: 5px;
+            color:#333;
+        }
+    </style>
+    </head>
+    <body>
+        <header>
+            <h1>Add a New Recipe</h1>
+        </header>
+        <nav>
+            <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="add-recipe.html">Add Recipe</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="recipe-list.html">Recipe List</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+        </nav>
+        <div class="container">
+            <h2>Recipe Submission Form</h2>
+            <form action="#" method="post" onsubmit="return validateForm()">
+                <label for="name">Recipe Name</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="ingredients">Ingredients</label>
+                <textarea id="ingredients" name="ingredients" required></textarea>
+    
+                <label for="instructions">Cooking Instructions</label>
+                <textarea id="instructions" name="instructions" required></textarea>
+    
+                &nbsp;<label for="image">Image URL</label>
+                      <input type="file" id="image" name="image" required>
+    
+                <label for="category">Recipe Category</label>
+                <select id="category" name="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Desserts">Desserts</option>
+                    <option value="Appetizers">Appetizers</option>
+                    <option value="Quick Meals">Quick Meals</option>
+                    <option value="Vegan">Vegan</option>
+                    <option value="Traditional">Traditional</option>
+                </select>
+    
+                <button type="submit">Add Recipe</button>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,131 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe List</title>
+    <style>
+        body {
+            font-family:Georgia, 'Times New Roman', Times, serif
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #c4ecf5;
+            padding: 5px;
+            text-align: center;
+        }
+        .category-filter {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .category-filter select, .category-filter a {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+        .recipe-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav {
+       background-color: #dde4a6;
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        align-items: center;
+    }
+        nav a{
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            margin: 0 5px
+            font-weight: bold;
+            align-items: center;
+        } 
+        .recipe-card {
+            width: 250px;
+            margin: 10px;
+            border: 1px solid #80caea;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .recipe-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .recipe-card h3 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+        .recipe-card p {
+            padding: 0 10px;
+            color: #000000;
+        }
+        .recipe-card a {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #2e8141;
+            color: rgb(207, 224, 231);
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .recipe-card a:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Recipe Gallery</h1>
+    
+
+</header>
+<nav>
+    <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="add-recipe.html">Add Recipe</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="recipe-list.html">Recipe List</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+</nav>
+<div class="category-filter">
+    <h2>Filter by Category</h2>
+    <select id="category-filter">
+        <option value="all">All Recipes</option>
+        <option value="desserts">Desserts</option>
+        <option value="vegan">Vegan</option>
+    </select>
+</div>
+
+<div class="recipe-gallery">
+
+    <div class="recipe-card">
+        <img src="../cake.webp" alt="Recipe 1">
+        <h3>Chocolate Cake</h3>
+        <p>A delicious and moist chocolate cake perfect for any occasion.</p>
+        <a href="recipe-detail.html">View Recipe</a>
+    </div>
+
+    
+    <div class="recipe-card">
+        <img src="../Salad.webp" alt="Recipe 2">
+        <h3>Vegan Salad</h3>
+        <p>A fresh and healthy vegan salad with a great taste.</p>
+        <a href="recipe-detail.html">View Recipe</a>
+    </div>
+
+
+    <div class="recipe-card">
+        <img src="../Greek-Yogurt-Fruit-Salad-scaled.jpg" alt="Recipe 3">
+        <h3>Furit Salad</h3>
+        <p>A quick and delicious furit salad with sweet cream.</p>
+        <a href="recipe-detail.html">View Recipe</a>
+    </div>
+</div>
+
+</body>
+</html></html>
