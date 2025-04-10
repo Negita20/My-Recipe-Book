@@ -1,132 +1,139 @@
 <!DOCTYPE html>
-<he lang="en">
-
+<html lang="en"> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Add Recipe Page</title>
+    <title>Add Recipe Page</title>
     <style>
         body {
-            font-family:'Times New Roman', Times, Garamond;
+            font-family: 'Times New Roman', Times, Garamond;
             margin: 0;
             padding: 0;
-            background-color:rgb(205, 223, 239) ;
+            background-color: rgb(205, 223, 239);
         }
+
         header {
-            background-color: #d8c3a5 ;
+            background-color: #d8c3a5;
             padding: 20px;
-            text-align: center ;
+            text-align: center;
         }
-          nav {
-        position: sticky;
-        top:0;
-       background-color: #dde4a6;
-        display: flex;
-        justify-content: center;
-        padding: 5px;
-        align-items: center;
-    }
-        nav a{
+
+        nav {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        nav a {
             color: rgb(0, 0, 0);
             text-decoration: none;
-            margin: 0 5px
+            margin: 0 15px;
             font-weight: bold;
-            align-items: center;
-        }  
-        .welcome {
-            text-align:center;
-            padding: 40px;
-        }
-        .featured-recipe, .categories {
-            max-width: 100%;
-            margin: auto;
-            padding: 20px
         }
 
-        .featured-recipe img {
+        .container {
+            max-width: 600px;
+            background-color: #ffffff;
+            padding: 30px;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="file"],
+        form textarea,
+        form select {
             width: 100%;
-            max-height: 400%;
-            object-fit: cover;
+            padding: 10px;
+            margin-top: 5px;
             border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
         }
 
-        .recipe-flex{
-            display: flex;
-    
-            align-items: center;
-            gap: 20px;
+        form textarea {
+            resize: vertical;
+            height: 100px;
         }
 
-        .recipe-flex img {
-         width: 50%;
-         max-height: 300px;
-         object-fit: cover;
-         border-radius: 10px
-        }
-
-        .recipe-text{
-            flex: 1;
-            min-width: 250px
-        }
-    
-        .featured-recipe a{
-            display: inline-block;
-            margin-top: 10px;
-            background-color:rgb(149, 198, 244);
+        form button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #6fa8dc;
             color: white;
-            padding: 10px 15px;
-            text-decoration: none;
+            border: none;
             border-radius: 5px;
+            cursor: pointer;
         }
-        .categories h2{
-            margin-bottom: 10px;
+
+        form button:hover {
+            background-color: #4a90d6;
         }
-        .category-links a{
-            display: inline-block;
-            margin: 5px;
-            padding: 10px 15px;
-            background-color:rgb(169, 189, 206);
-            border-radius: 5px;
-            color:#333;
+        footer {
+            text-align: center;
+            background-color: #d8c3a5;
+            padding: 1px;
+            margin-top: 40px;
+            font-size: 12px;
+            color: #333;
         }
     </style>
-    </head>
-    <body>
-        <header>
-            <h1>Add a New Recipe</h1>
-        </header>
-        <nav>
-            <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="add-recipe.html">Add Recipe</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="recipe-list.html">Recipe List</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            
-        </nav>
-        <div class="container">
-            <h2>Recipe Submission Form</h2>
-            <form action="#" method="post" onsubmit="return validateForm()">
-                <label for="name">Recipe Name</label>
-                <input type="text" id="name" name="name" required>
-    
-                <label for="ingredients">Ingredients</label>
-                <textarea id="ingredients" name="ingredients" required></textarea>
-    
-                <label for="instructions">Cooking Instructions</label>
-                <textarea id="instructions" name="instructions" required></textarea>
-    
-                &nbsp;<label for="image">Image URL</label>
-                      <input type="file" id="image" name="image" required>
-    
-                <label for="category">Recipe Category</label>
-                <select id="category" name="category" required>
-                    <option value="">Select Category</option>
-                    <option value="Desserts">Desserts</option>
-                    <option value="Appetizers">Appetizers</option>
-                    <option value="Quick Meals">Quick Meals</option>
-                    <option value="Vegan">Vegan</option>
-                    <option value="Traditional">Traditional</option>
-                </select>
-    
-                <button type="submit">Add Recipe</button>
-            </form>
-        </div>
-    </body>
+</head>
+<body>
+    <header>
+        <h1>Add a New Recipe</h1>
+    </header>
+    <main>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="add-recipe.html">Add Recipe</a>
+        <a href="recipe-list.html">Recipe List</a>
+    </nav>
+
+    <div class="container">
+        <h2>Recipe Submission Form</h2>
+        <form action="#" method="post" onsubmit="return validateForm()">
+            <label for="name">Recipe Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="ingredients">Ingredients</label>
+            <textarea id="ingredients" name="ingredients" required></textarea>
+
+            <label for="instructions">Cooking Instructions</label>
+            <textarea id="instructions" name="instructions" required></textarea>
+
+            <label for="image">Upload Image</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+
+            <label for="category">Recipe Category</label>
+            <select id="category" name="category" required>
+                <option value="">Select Category</option>
+                <option value="Desserts">Desserts</option>
+                <option value="Appetizers">Appetizers</option>
+                <option value="Quick Meals">Quick Meals</option>
+                <option value="Vegan">Vegan</option>
+                <option value="Traditional">Traditional</option>
+            </select>
+
+            <button type="submit">Add Recipe</button>
+        </form>
+    </div>
+</main>
+    <footer>
+        <p>&copy; 2025 made by: Negita Zafaryan</p>
+    </footer>
+</body>
 </html>
