@@ -17,7 +17,9 @@
             text-align: center ;
         }
        nav {
-       background-color: #dde4a6;
+        position: sticky;
+        top:0;
+        background-color: #dde4a6;
         display: flex;
         justify-content: center;
         padding: 5px;
@@ -30,12 +32,10 @@
             font-weight: bold;
             align-items: center;
         } 
-
-        a: hover , a.active{
-            background: none;
-            color:#dde4a6;
+        /* Responsive Design */
+        nav {
+            flex-wrap: wrap;
         }
-            
         .welcome {
             text-align:center;
             padding: 40px;
